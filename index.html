@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pixel Morph</title>
+</head>
+<body>
+<link rel="stylesheet" href="style.css">
+<h1>Pixel Morph</h1>
+<h3>Choose 2 images and watch them morph hẹ hẹ hẹ</h3>
+
+<form id="form">
+  <label class="file-label" id="label1">
+    <span class="icon">🖼</span>
+    <span id="name1">Image 1</span>
+    <input type="file" id="img1" accept="image/*" required>
+  </label>
+  <label class="file-label" id="label2">
+    <span class="icon">🌄</span>
+    <span id="name2">Image 2</span>
+    <input type="file" id="img2" accept="image/*" required>
+  </label>
+  <button type="submit">Morph ✦</button>
+</form>
+
+<div class="canvas-wrap">
+  <canvas id="canvas" width="256" height="256"></canvas>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

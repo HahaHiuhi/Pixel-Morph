@@ -1,0 +1,102 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: sans-serif;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+    background: #0d0d1a;
+  }
+
+  h1 {
+    font-size: clamp(1.6rem, 6vw, 2.4rem);
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(90deg, #a78bfa, #38bdf8, #34d399);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  h3 {
+    font-size: clamp(0.8rem, 3vw, 1rem);
+    font-weight: 400;
+    color: #94a3b8;
+    letter-spacing: 0.3px;
+  }
+
+  #form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .file-label {
+    flex: 1 1 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    border: 1.5px dashed #334155;
+    background: #131929;
+    color: #94a3b8;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .file-label:hover { border-color: #a78bfa; background: #1a1f35; color: #c4b5fd; }
+
+  .file-label .icon {
+    font-size: 1.4rem;
+    line-height: 1;
+  }
+
+  .file-label input[type="file"] {
+    display: none;
+  }
+
+  .file-label.chosen { border-color: #34d399; border-style: solid; color: #34d399; }
+
+  button {
+    padding: 0.6rem 2rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+    color: #fff;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: opacity 0.2s, transform 0.1s;
+  }
+
+  button:hover { opacity: 0.88; }
+  button:active { transform: scale(0.97); }
+
+  .canvas-wrap {
+    position: relative;
+    border-radius: 12px;
+    padding: 3px;
+    background: linear-gradient(135deg, #a78bfa, #38bdf8, #34d399);
+  }
+
+  #canvas {
+    display: block;
+    width: min(256px, 90vw);
+    height: min(256px, 90vw);
+    border-radius: 10px;
+    background: #0d0d1a;
+    image-rendering: pixelated;
+  }
