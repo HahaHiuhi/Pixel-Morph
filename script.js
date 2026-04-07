@@ -1,7 +1,11 @@
 "use strict";
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
-const SIZE = 512; // up from 256
+const SIZE = Math.min(512, Math.floor(window.innerWidth * 0.9));
+canvas.width = SIZE;
+canvas.height = SIZE;
+canvas.style.width = `${SIZE}px`;
+canvas.style.height = `${SIZE}px`;
 const TOTAL = 1000;
 // ===== UI =====
 document.getElementById("img1").addEventListener("change", async (e) => {
