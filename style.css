@@ -94,9 +94,14 @@
 
   #canvas {
     display: block;
-    width: min(256px, 90vw);
-    height: min(256px, 90vw);
+    width: min(512px, 90vw);
+    height: min(512px, 90vw);
     border-radius: 10px;
     background: #0d0d1a;
     image-rendering: pixelated;
   }
+
+  #downloadBtn {
+  background: linear-gradient(135deg, #0f766e, #0369a1);
+  margin-top: 0.5rem;
+}
